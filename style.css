@@ -1,0 +1,442 @@
+/* Grundstil */
+body {
+    font-family: 'Lora', serif; /* Default Fliesstext */
+    margin: 0;
+    padding: 0;
+    background-color: #FFF7F2;
+    color: #2F2A25;
+    font-size: 1rem;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;        /* vertikal zentriert */
+    justify-content: space-between; /* Logo links, Navigation rechts */
+    background-color: #FFF7F2;
+    padding: 1rem 2rem;
+}
+
+header .logo {
+    max-height: 80px;  /* Höhe des Logos */
+    width: auto;       /* proportional skalieren */
+}
+
+/* Navigation */
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 2rem;
+}
+
+nav a {
+    font-family: 'Fjalla One', sans-serif; /* Fjalla One für Navigation */
+    text-decoration: none;
+    color: #2F2A25;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+/* Hero auf Startseite */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2rem;
+    background: linear-gradient(to bottom, #ffc59b, #fef5f0);
+    gap: 2rem;
+}
+
+.hero-img {
+    max-width: 500px;
+    height: auto;
+    clip-path: none;
+}
+
+.hero h1 {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 12rem;
+    margin: 0;
+}
+
+/* Kartenbereich */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* immer 2 Spalten */
+    gap: 2.5rem; /* grösserer Abstand zwischen den Karten */
+    padding: 2rem;
+}
+
+.card {
+    border-radius: 1rem;
+    overflow: hidden;
+    text-align: center;
+    padding: 1rem;
+    max-width: 250px; /* Karten kleiner */
+    margin: 0 auto;   /* zentriert innerhalb Grid-Zelle */
+}
+
+.card img {
+    width: 100%;
+    border-radius: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.card button {
+    font-family: 'Fjalla One', sans-serif; /* Fjalla One für Buttons */
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2rem;
+    background-color: F3E8DC; /* Beispielhintergrund, kann angepasst werden */
+    color: #2F2A25;
+}
+
+/* Farben der Karten */
+.mint { background-color: #b7e4c7; }
+.rose { background-color: #f1c0c0; }
+.lavender { background-color: #d7bde2; }
+.yellow { background-color: #fff1b6; }
+
+/* Fjalla One für alle Überschriften */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Fjalla One', sans-serif;
+}
+
+/* Footer – individuell pro Seite */
+footer.footer-home {
+    background-color: #F8B88B; /* Startseite */
+}
+
+footer.footer-about {
+    background-color: #b7e4c7; /* About-Seite */
+}
+
+footer.footer-portfolio {
+    background-color: #f1c0c0; /* Portfolio-Seite */
+}
+
+/* allgemeine Footer-Stile */
+footer {
+    padding: 2rem;
+    text-align: center;
+}
+
+footer p {
+    margin: 0 0 1rem 0;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 1rem;
+    color: #2F2A25;
+}
+
+footer .social-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+footer .social-links li a {
+    text-decoration: none;
+    color: #2F2A25;
+    font-family: 'Fjalla One', sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+/* About-Section */
+.about {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.about-box {
+    background-color: #b7e4c7; /* mintgrün wie auf Startseite */
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.about-box h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.about-box p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* About-Hero-Bereich */
+.about-hero {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 3rem 2rem;
+    background: linear-gradient(to bottom, #b7e4c7, #fef5f0); /* sanfter Farbverlauf */
+    gap: 2rem;
+}
+
+.about-hero-img {
+    max-width: 500px;
+    height: auto;
+    border-radius: 1rem;
+}
+
+.about-hero-text {
+    max-width: 600px;
+}
+
+.about-hero-text h1 {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 12rem;
+    margin: 0 0 1rem 0;
+}
+
+.about-hero-text p {
+    font-family: 'Lora', serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Portfolio-Hero */
+.portfolio-hero {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 3rem 2rem;
+    background: linear-gradient(to bottom, #f1c0c0, #FFF7F2);
+    gap: 2rem;
+}
+
+.portfolio-hero-img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 1rem;
+}
+
+.portfolio-hero-text {
+    max-width: 600px;
+}
+
+.portfolio-hero-text h1 {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 12rem;
+    margin: 0 0 1rem 0;
+}
+
+.portfolio-hero-text p {
+    font-family: 'Lora', serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Portfolio Kategorien */
+.portfolio-category h2 {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 2rem;
+    margin: 2rem 0 1rem 0;
+    text-align: center;
+}
+
+/* Projekt-Boxen */
+.portfolio-projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+    padding: 0 2rem; /* Abstand links und rechts */
+}
+
+
+.project-box {
+    background-color: #f1c0c0; /* rosa wie auf der Startseite */
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+/* Hero für Angebotsseite in Violett */
+.angebot-hero {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 3rem 2rem;
+    background: linear-gradient(to bottom, #d7bde2, #fef5f0); /* Lavender-Gradient */
+    gap: 2rem;
+}
+
+.angebot-hero-img {
+    max-width: 400px;
+    height: auto;
+    border-radius: 1rem;
+}
+
+.angebot-hero-text h1 {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 12rem;
+    margin: 0 0 1rem 0;
+}
+
+.angebot-hero-text p {
+    font-family: 'Lora', serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Boxenfarben: Violett */
+.angebot-skills .card,
+.angebot-tools .card {
+    background-color: #d7bde2; /* Lavender wie auf Startseite */
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Titel in den Boxen */
+.angebot-skills .card h3,
+.angebot-tools .card h3 {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 1.5rem;
+    margin: 0 0 0.5rem 0;
+    text-align: center;
+}
+
+/* Listen in den Boxen */
+.angebot-skills .card ul,
+.angebot-tools .card ul {
+    font-family: 'Lora', serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+    padding-left: 1.2rem;
+}
+
+/* Footer für Angebotsseite */
+footer.footer-angebot {
+    background-color: #d7bde2; /* Violett */
+    padding: 2rem;
+    text-align: center;
+    color: #2F2A25;
+}
+
+
+/* Hero Kontaktseite – Gelb */
+.kontakt-hero {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 3rem 2rem;
+    background: linear-gradient(to bottom, #fff1b6, #fef5f0); /* Gelb wie auf Startseite */
+    gap: 2rem;
+}
+
+.kontakt-hero-img {
+    max-width: 400px;
+    height: auto;
+    border-radius: 1rem;
+}
+
+.kontakt-hero-text h1 {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 12rem;
+    margin: 0 0 1rem 0;
+}
+
+.kontakt-hero-text p {
+    font-family: 'Lora', serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Kontaktformular Wrapper */
+.kontakt-form {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.kontakt-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* zentriert alles */
+    gap: 0.6rem;
+    max-width: 500px;
+    width: 100%;
+}
+
+/* Labels */
+.kontakt-form label {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 1rem;
+    align-self: flex-start; /* Text bündig links */
+}
+
+/* Inputs & Textareas */
+.kontakt-form input[type="text"],
+.kontakt-form input[type="email"],
+.kontakt-form input[type="subject"] {
+    width: 60%;        /* kürzere Felder */
+}
+
+.kontakt-form textarea {
+    width: 100%;       /* Textarea schön breit */
+}
+
+.kontakt-form input,
+.kontakt-form textarea {
+    padding: 0.7rem;
+    border: 2px solid #fff1b6;
+    border-radius: 0.5rem;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 1rem;
+}
+
+.kontakt-form input::placeholder,
+.kontakt-form textarea::placeholder {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 1rem;
+}
+
+/* Button */
+.kontakt-form button {
+    width: 60%;  /* ebenfalls schön zentriert */
+    padding: 0.8rem;
+    background-color: #fff1b6;
+    border: none;
+    border-radius: 0.5rem;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+
+/* Footer Kontaktseite */
+footer.footer-kontakt {
+    background-color: #fff1b6; /* Gelb */
+    padding: 2rem;
+    text-align: center;
+    color: #2F2A25;
+}
+
