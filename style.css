@@ -48,6 +48,8 @@ nav a {
     padding: 2rem;
     background: linear-gradient(to bottom, #ffc59b, #fef5f0);
     gap: 2rem;
+    margin-bottom: 8rem;
+     padding-bottom: 5rem;
 }
 
 .hero-img {
@@ -65,34 +67,36 @@ nav a {
 /* Kartenbereich */
 .cards {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* immer 2 Spalten */
-    gap: 2.5rem; /* grösserer Abstand zwischen den Karten */
-    padding: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;              /* etwas mehr Luft */
+    padding: 3rem;          /* mehr Abstand zum Rand */
+    max-width: 1400px;      /* viel breiter */
+    margin: 0 auto;         /* schön zentriert */
 }
 
 .card {
+    padding: 2rem;
     border-radius: 1rem;
-    overflow: hidden;
-    text-align: center;
-    padding: 1rem;
-    max-width: 250px; /* Karten kleiner */
-    margin: 0 auto;   /* zentriert innerhalb Grid-Zelle */
+    max-width: 100%;        /* keine Begrenzung mehr */
+    min-height: 350px;      /* wirkt viel massiver */
 }
 
 .card img {
     width: 100%;
+    height: 250px;           /* fixierte schöne Höhe */
+    object-fit: cover;       /* Perfekte Bildfüllung */
     border-radius: 1rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .card button {
     font-family: 'Fjalla One', sans-serif; /* Fjalla One für Buttons */
-    padding: 0.5rem 1rem;
+   padding: 1rem 1.5rem;
     border: none;
     border-radius: 1rem;
     cursor: pointer;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     background-color: F3E8DC; /* Beispielhintergrund, kann angepasst werden */
     color: #2F2A25;
 }
