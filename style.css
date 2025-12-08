@@ -1,185 +1,80 @@
-/* Grundstil */
+/* --------------------------------------------------
+   GLOBAL
+-------------------------------------------------- */
+
 body {
-    font-family: 'Lora', serif; /* Default Fliesstext */
     margin: 0;
-    padding: 0;
-    background-color: #FFF7F2;
-    color: #2F2A25;
-    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    color: #222;
+    background-color: #fff;
 }
 
-/* Header */
-header {
-    display: flex;
-    align-items: center;        /* vertikal zentriert */
-    justify-content: space-between; /* Logo links, Navigation rechts */
-    background-color: #FFF7F2;
-    padding: 1rem 2rem;
+h1, h2, h3 {
+    font-family: 'Fjalla One', sans-serif;
+    letter-spacing: 0.5px;
 }
 
-header .logo {
-    max-height: 80px;  /* Höhe des Logos */
-    width: auto;       /* proportional skalieren */
-}
-
-/* Navigation */
-nav ul {
-    display: flex;
-    justify-content: flex-end;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    gap: 2rem;
-}
-
-nav a {
-    font-family: 'Fjalla One', sans-serif; /* Fjalla One für Navigation */
+a {
     text-decoration: none;
-    color: #2F2A25;
-    font-weight: bold;
-    font-size: 1.4rem;
+    color: inherit;
 }
 
-/* Hero auf Startseite */
+/* Zentrierter Container */
+.section-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* --------------------------------------------------
+   HERO
+-------------------------------------------------- */
+
 .hero {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 2rem;
-    background: linear-gradient(to bottom, #ffc59b, #fef5f0);
-    gap: 2rem;
-    margin-bottom: 8rem;
-     padding-bottom: 5rem;
-}
-
-.hero-img {
-    max-width: 500px;
-    height: auto;
-    clip-path: none;
-}
-
-.hero h1 {
-    font-family: 'Fjalla One', sans-serif;
-    font-size: 12rem;
-    margin: 0;
-}
-
-/* Kartenbereich */
-.cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;              /* etwas mehr Luft */
-    padding: 3rem;          /* mehr Abstand zum Rand */
-    max-width: 1400px;      /* viel breiter */
-    margin: 0 auto;         /* schön zentriert */
-}
-
-.card {
-    padding: 2rem;
-    border-radius: 1rem;
-    max-width: 100%;        /* keine Begrenzung mehr */
-    min-height: 350px;      /* wirkt viel massiver */
-}
-
-.card img {
     width: 100%;
-    height: 250px;           /* fixierte schöne Höhe */
-    object-fit: cover;       /* Perfekte Bildfüllung */
-    border-radius: 1rem;
-    margin-bottom: 1rem;
-}
-
-.card button {
-    font-family: 'Fjalla One', sans-serif; /* Fjalla One für Buttons */
-   padding: 1rem 1.5rem;
-    border: none;
-    border-radius: 1rem;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 1.4rem;
-    background-color: F3E8DC; /* Beispielhintergrund, kann angepasst werden */
-    color: #2F2A25;
-}
-
-/* Farben der Karten */
-.mint { background-color: #b7e4c7; }
-.rose { background-color: #f1c0c0; }
-.lavender { background-color: #d7bde2; }
-.yellow { background-color: #fff1b6; }
-
-/* Fjalla One für alle Überschriften */
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Fjalla One', sans-serif;
-}
-
-/* Footer – individuell pro Seite */
-footer.footer-home {
-    background-color: #F8B88B; /* Startseite */
-}
-
-footer.footer-about {
-    background-color: #b7e4c7; /* About-Seite */
-}
-
-footer.footer-portfolio {
-    background-color: #f1c0c0; /* Portfolio-Seite */
-}
-
-/* allgemeine Footer-Stile */
-footer {
-    padding: 2rem;
+    height: 350px;
+    background: linear-gradient(135deg, #6f2cff, #9c6bff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
-footer p {
-    margin: 0 0 1rem 0;
-    font-family: 'Fjalla One', sans-serif;
-    font-size: 1rem;
-    color: #2F2A25;
+.hero h1 {
+    font-size: 48px;
+    color: white;
 }
 
-footer .social-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+/* --------------------------------------------------
+   ÜBER MICH – Variante A
+-------------------------------------------------- */
+
+.about-container {
     display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 2rem;
+    gap: 50px;
+    margin-top: 60px;
 }
 
-footer .social-links li a {
-    text-decoration: none;
-    color: #2F2A25;
-    font-family: 'Fjalla One', sans-serif;
-    font-weight: bold;
-    font-size: 1rem;
-    transition: color 0.3s;
+.about-image img {
+    width: 300px;
+    height: auto;
+    border-radius: 14px;
 }
 
-/* About-Section */
-.about {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    padding: 2rem;
+.about-text {
+    max-width: 450px;
 }
 
-.about-box {
-    background-color: #b7e4c7; /* mintgrün wie auf Startseite */
-    padding: 1.5rem;
-    border-radius: 1rem;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+.about-text h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
 }
 
-.about-box h2 {
-    margin-top: 0;
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.about-box p {
-    margin: 0;
-    line-height: 1.5;
+.about-text p {
+    line-height: 1.6;
+    font-size: 17px;
 }
 
 /* TIMELINE SECTION */
@@ -234,265 +129,146 @@ footer .social-links li a {
 }
 
 
-/* About-Hero-Bereich */
-.about-hero {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 3rem 2rem;
-    background: linear-gradient(to bottom, #b7e4c7, #fef5f0); /* sanfter Farbverlauf */
-    gap: 2rem;
-}
+/* --------------------------------------------------
+   PORTFOLIO GRID
+-------------------------------------------------- */
 
-.about-hero-img {
-    max-width: 500px;
-    height: auto;
-    border-radius: 1rem;
-}
-
-.about-hero-text {
-    max-width: 600px;
-}
-
-.about-hero-text h1 {
-    font-family: 'Fjalla One', sans-serif;
-    font-size: 12rem;
-    margin: 0 0 1rem 0;
-}
-
-.about-hero-text p {
-    font-family: 'Lora', serif;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin: 0;
-}
-
-/* Portfolio-Hero */
-.portfolio-hero {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 3rem 2rem;
-    background: linear-gradient(to bottom, #f1c0c0, #FFF7F2);
-    gap: 2rem;
-}
-
-.portfolio-hero-img {
-    max-width: 300px;
-    height: auto;
-    border-radius: 1rem;
-}
-
-.portfolio-hero-text {
-    max-width: 600px;
-}
-
-.portfolio-hero-text h1 {
-    font-family: 'Fjalla One', sans-serif;
-    font-size: 12rem;
-    margin: 0 0 1rem 0;
-}
-
-.portfolio-hero-text p {
-    font-family: 'Lora', serif;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin: 0;
-}
-
-/* Portfolio Kategorien */
-.portfolio-category h2 {
-    font-family: 'Fjalla One', sans-serif;
-    font-size: 2rem;
-    margin: 2rem 0 1rem 0;
-    text-align: center;
-}
-
-/* Projekt-Boxen */
-.portfolio-projects {
+.portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-bottom: 3rem;
-    padding: 0 2rem; /* Abstand links und rechts */
+    grid-template-columns: repeat(2, 1fr); /* zwei Spalten */
+    gap: 28px;
+    margin-top: 60px;
 }
 
-
-.project-box {
-    background-color: #f1c0c0; /* rosa wie auf der Startseite */
-    padding: 2rem;
-    border-radius: 1rem;
+.portfolio-item {
+    background-color: #f1eaff;
+    border-radius: 18px;
+    padding: 20px;
     text-align: center;
-    font-family: 'Fjalla One', sans-serif;
-    font-size: 1.2rem;
+    transition: transform 0.2s;
     cursor: pointer;
-    transition: transform 0.3s;
 }
 
-/* Hero für Angebotsseite in Violett */
-.angebot-hero {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 3rem 2rem;
-    background: linear-gradient(to bottom, #d7bde2, #fef5f0); /* Lavender-Gradient */
-    gap: 2rem;
+.portfolio-item:hover {
+    transform: translateY(-4px);
 }
 
-.angebot-hero-img {
-    max-width: 400px;
-    height: auto;
-    border-radius: 1rem;
-}
-
-.angebot-hero-text h1 {
-    font-family: 'Fjalla One', sans-serif;
-    font-size: 12rem;
-    margin: 0 0 1rem 0;
-}
-
-.angebot-hero-text p {
-    font-family: 'Lora', serif;
-    font-size: 1.2rem;
-    line-height: 1.6;
-    margin: 0;
-}
-
-/* Boxenfarben: Violett */
-.angebot-skills .card,
-.angebot-tools .card {
-    background-color: #d7bde2; /* Lavender wie auf Startseite */
-    padding: 1.5rem;
-    border-radius: 1rem;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-/* Titel in den Boxen */
-.angebot-skills .card h3,
-.angebot-tools .card h3 {
-    font-family: 'Fjalla One', sans-serif;
-    font-size: 1.5rem;
-    margin: 0 0 0.5rem 0;
-    text-align: center;
-}
-
-/* Listen in den Boxen */
-.angebot-skills .card ul,
-.angebot-tools .card ul {
-    font-family: 'Lora', serif;
-    font-size: 1rem;
-    line-height: 1.5;
-    margin: 0;
-    padding-left: 1.2rem;
-}
-
-/* Footer für Angebotsseite */
-footer.footer-angebot {
-    background-color: #d7bde2; /* Violett */
-    padding: 2rem;
-    text-align: center;
-    color: #2F2A25;
-}
-
-
-/* Hero Kontaktseite – Gelb */
-.kontakt-hero {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 3rem 2rem;
-    background: linear-gradient(to bottom, #fff1b6, #fef5f0); /* Gelb wie auf Startseite */
-    gap: 2rem;
-}
-
-.kontakt-hero-img {
-    max-width: 400px;
-    height: auto;
-    border-radius: 1rem;
-}
-
-.kontakt-hero-text h1 {
-    font-family: 'Fjalla One', sans-serif;
-    font-size: 12rem;
-    margin: 0 0 1rem 0;
-}
-
-.kontakt-hero-text p {
-    font-family: 'Lora', serif;
-    font-size: 1.2rem;
-    line-height: 1.6;
-    margin: 0;
-}
-
-/* Kontaktformular Wrapper */
-.kontakt-form {
-    display: flex;
-    justify-content: center;
+.portfolio-item img {
     width: 100%;
-    margin-top: 2rem;
+    border-radius: 12px;
+    margin-bottom: 12px;
 }
 
-.kontakt-form form {
+.portfolio-item h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.portfolio-item p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* --------------------------------------------------
+   SKILL BOXEN
+-------------------------------------------------- */
+
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+    margin-top: 40px;
+}
+
+.skill-box {
+    background-color: #f1eaff;
+    padding: 24px;
+    border-radius: 18px;
+}
+
+.skill-box h3 {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.skill-box ul {
+    margin: 0;
+    padding-left: 18px;
+    line-height: 1.6;
+}
+
+/* --------------------------------------------------
+   KONTAKT
+-------------------------------------------------- */
+
+.contact-wrapper {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.contact-wrapper p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+form {
     display: flex;
     flex-direction: column;
-    align-items: center; /* zentriert alles */
-    gap: 0.6rem;
+    align-items: center;
+    gap: 14px; /* kleiner Abstand */
+}
+
+/* Eingabefelder */
+input, textarea {
+    width: 70%;
     max-width: 500px;
-    width: 100%;
-}
-
-/* Labels */
-.kontakt-form label {
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 2px solid #fdcd00; /* GELB */
     font-family: 'Fjalla One', sans-serif;
-    font-size: 1rem;
-    align-self: flex-start; /* Text bündig links */
+    font-size: 16px;
 }
 
-/* Inputs & Textareas */
-.kontakt-form input[type="text"],
-.kontakt-form input[type="email"],
-.kontakt-form input[type="subject"] {
-    width: 60%;        /* kürzere Felder */
-}
-
-.kontakt-form textarea {
-    width: 100%;       /* Textarea schön breit */
-}
-
-.kontakt-form input,
-.kontakt-form textarea {
-    padding: 0.7rem;
-    border: 2px solid #fff1b6;
-    border-radius: 0.5rem;
-    font-family: 'Fjalla One', sans-serif;
-    font-size: 1rem;
-}
-
-.kontakt-form input::placeholder,
-.kontakt-form textarea::placeholder {
-    font-family: 'Fjalla One', sans-serif;
-    font-size: 1rem;
+/* Kürzer für Name / Mail / Betreff */
+input.small {
+    width: 50%;
+    max-width: 350px;
 }
 
 /* Button */
-.kontakt-form button {
-    width: 60%;  /* ebenfalls schön zentriert */
-    padding: 0.8rem;
-    background-color: #fff1b6;
+button {
+    margin-top: 10px;
+    background-color: #fdcd00;
     border: none;
-    border-radius: 0.5rem;
+    padding: 12px 26px;
     font-family: 'Fjalla One', sans-serif;
-    font-size: 1.2rem;
+    font-size: 18px;
+    border-radius: 8px;
     cursor: pointer;
-    margin-top: 0.5rem;
 }
 
-
-/* Footer Kontaktseite */
-footer.footer-kontakt {
-    background-color: #fff1b6; /* Gelb */
-    padding: 2rem;
-    text-align: center;
-    color: #2F2A25;
+button:hover {
+    opacity: 0.85;
 }
 
+/* --------------------------------------------------
+   RESPONSIVE
+-------------------------------------------------- */
+
+@media (max-width: 850px) {
+
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .portfolio-grid,
+    .skill-grid {
+        grid-template-columns: 1fr; /* eine Spalte auf Mobile */
+    }
+
+    input.small {
+        width: 75%;
+    }
+}
