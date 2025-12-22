@@ -36,17 +36,21 @@
         <section class="portfolio-category">
             <h2>video & film</h2>
             <div class="portfolio-projects">
-                <div class="project-box">
+                <div class="project-box" onclick="openModal('video1')">
                     <img src="images/video1.jpg" alt="Projekt Video 1" style="width:100%; border-radius: 1rem;">
                     <p>Reitsport hautnah - Ein POV-Erlebnis</p>
                 </div>
-                <div class="project-box">
+                <div class="project-box" onclick="openModal('video2')">
                     <img src="images/video2.jpg" alt="Projekt Video 2" style="width:100%; border-radius: 1rem;">
                     <p>Aufstieg zum Dach Afrikas – 7 Tage Kilimandscharo</p>
                 </div>
-                <div class="project-box">
-                    <img src="images/video3.jpg" alt="Projekt Video 3" style="width:100%; border-radius: 1rem;">
-                    <p>Projekt 3</p>
+                <div class="project-box" onclick="openModal('video3')">
+                    <img src="https://img.youtube.com/vi/lfcPbIirhFE/maxresdefault.jpg" alt="Stop Motion Rezept" style="width:100%; border-radius: 1rem;">
+                    <p>Stop Motion Rezept</p>
+                </div>
+                <div class="project-box" onclick="openModal('video4')">
+                    <img src="https://img.youtube.com/vi/yBEAAd84Kgg/maxresdefault.jpg" alt="ASMR Video - Pferde Edition" style="width:100%; border-radius: 1rem;">
+                    <p>ASMR Video - Pferde Edition</p>
                 </div>
             </div>
         </section>
@@ -55,15 +59,15 @@
         <section class="portfolio-category">
             <h2>social media & content</h2>
             <div class="portfolio-projects">
-                <div class="project-box">
-                    <img src="images/social1.jpg" alt="Projekt Social 1" style="width:100%; border-radius: 1rem;">
-                    <p>Projekt 1</p>
+                <div class="project-box" onclick="openModal('social1')">
+                    <img src="https://img.youtube.com/vi/WZR0yEJ_FYg/maxresdefault.jpg" alt="Auf Tour mit Andrea Bignasca" style="width:100%; border-radius: 1rem;">
+                    <p>Auf Tour mit Andrea Bignasca</p>
                 </div>
-                <div class="project-box">
-                    <img src="images/social2.jpg" alt="Projekt Social 2" style="width:100%; border-radius: 1rem;">
-                    <p>Projekt 2</p>
+                <div class="project-box" onclick="openModal('social2')">
+                    <img src="images/social2.jpg" alt="bandXost Qualifikationen 2025" style="width:100%; border-radius: 1rem;">
+                    <p>bandXost Qualifikationen 2025</p>
                 </div>
-                <div class="project-box">
+                <div class="project-box" onclick="openModal('social3')">
                     <img src="images/social3.jpg" alt="Projekt Social 3" style="width:100%; border-radius: 1rem;">
                     <p>Projekt 3</p>
                 </div>
@@ -74,15 +78,15 @@
         <section class="portfolio-category">
             <h2>illustration & design</h2>
             <div class="portfolio-projects">
-                <div class="project-box">
+                <div class="project-box" onclick="openModal('foto1')">
                     <img src="images/foto1.jpg" alt="Projekt Foto 1" style="width:100%; border-radius: 1rem;">
                     <p>Projekt 1</p>
                 </div>
-                <div class="project-box">
+                <div class="project-box" onclick="openModal('foto2')">
                     <img src="images/foto2.jpg" alt="Projekt Foto 2" style="width:100%; border-radius: 1rem;">
                     <p>Projekt 2</p>
                 </div>
-                <div class="project-box">
+                <div class="project-box" onclick="openModal('foto3')">
                     <img src="images/foto3.jpg" alt="Projekt Foto 3" style="width:100%; border-radius: 1rem;">
                     <p>Projekt 3</p>
                 </div>
@@ -90,16 +94,145 @@
         </section>
     </main>
 
+    <!-- Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="modal-body">
+                <div class="modal-media" id="modalMedia"></div>
+                <div class="modal-info">
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalDescription"></p>
+                    <div id="modalYouTubeLink" style="margin-top: 1.5rem;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer class="footer-portfolio">
         <div class="footer-content">
             <p>&copy; 2025 Nadine Brändli</p>
             <ul class="social-links">
-                <li><a href="#">Instagram</a></li>
-                <li><a href="#">LinkedIn</a></li>
-                <li><a href="#">E-Mail</a></li>
+                <li><a href="https://www.instagram.com/nadinebraendli/" target="_blank">Instagram</a></li>
+                <li><a href="https://www.linkedin.com/in/nadine-elena-br%C3%A4ndli-325a34291/" target="_blank">LinkedIn</a></li>
+                <li><a href="kontakt.html">E-Mail</a></li>
             </ul>
         </div>
     </footer>
+
+    <script>
+        // Projekt-Daten
+        const projects = {
+            video1: {
+                title: "Reitsport hautnah - Ein POV-Erlebnis",
+                description: "Ein immersives Video-Erlebnis aus der Perspektive eines Reiters. Dieses Projekt zeigt die Dynamik und Schönheit des Reitsports.",
+                tasks: ['Kamera', 'Regie', 'Schnitt', 'Storytelling'],
+                media: '<img src="images/video1.jpg" alt="Reitsport" style="width:100%; border-radius: 1rem;">',
+                youtubeLink: 'https://www.youtube.com/watch?v=VIDEO_ID_1'
+            },
+            video2: {
+                title: "Aufstieg zum Dach Afrikas – 7 Tage Kilimandscharo",
+                description: "Eine Dokumentation über die Reise zum Kilimandscharo. Zeigt die atemberaubende Landschaft und persönliche Momente der Expedition.",
+                tasks: ['Kamera', 'Schnitt'],
+                media: '<img src="images/video2.jpg" alt="Kilimandscharo" style="width:100%; border-radius: 1rem;">',
+                youtubeLink: 'https://www.youtube.com/watch?v=VIDEO_ID_2'
+            },
+            video3: {
+                title: "Stop Motion Rezept",
+                description: "Ein kreatives Stop-Motion Video, das das Zubereiten eines Rezepts auf humorvolle und visuelle Weise zeigt.",
+                tasks: ['Drehbuch', 'Kamera', 'Regie', 'Schnitt', 'Ton'],
+                media: '<img src="https://img.youtube.com/vi/lfcPbIirhFE/maxresdefault.jpg" alt="Stop Motion Rezept" style="width:100%; border-radius: 1rem;">',
+                youtubeLink: 'https://youtu.be/lfcPbIirhFE'
+            },
+            video4: {
+                title: "ASMR Video - Pferde Edition",
+                description: "Ein beruhigendes ASMR Video rund um Pferde mit entspannenden Geräuschen und visuellen Elementen.",
+                tasks: ['Drehbuch', 'Kamera', 'Regie', 'Schnitt', 'Ton'],
+                media: '<img src="https://img.youtube.com/vi/yBEAAd84Kgg/maxresdefault.jpg" alt="ASMR Video - Pferde Edition" style="width:100%; border-radius: 1rem;">',
+                youtubeLink: 'https://youtu.be/yBEAAd84Kgg'
+            },
+            social1: {
+                title: "Auf Tour mit Andrea Bignasca",
+                description: "Beschreibung für Social Media Projekt 1",
+                tasks: ['Video'],
+                media: '<img src="https://img.youtube.com/vi/WZR0yEJ_FYg/maxresdefault.jpg" alt="Auf Tour mit Andrea Bignasca" style="width:100%; border-radius: 1rem;">',
+                youtubeLink: 'https://youtu.be/WZR0yEJ_FYg'
+            },
+            social2: {
+                title: "bandXost Qualifikationen 2025",
+                description: "Beschreibung für bandXost Qualifikationen 2025",
+                tasks: ['Video', 'Schnitt'],
+                media: '<img src="images/social2.jpg" alt="bandXost Qualifikationen 2025" style="width:100%; border-radius: 1rem;">',
+                youtubeLink: null
+            },
+            social3: {
+                title: "Social Media Projekt 3",
+                description: "Beschreibung für Social Media Projekt 3",
+                media: '<img src="images/social3.jpg" alt="Social 3" style="width:100%; border-radius: 1rem;">',
+                youtubeLink: null
+            },
+            foto1: {
+                title: "Illustration & Design Projekt 1",
+                description: "Beschreibung für Illustration & Design Projekt 1",
+                media: '<img src="images/foto1.jpg" alt="Foto 1" style="width:100%; border-radius: 1rem;">',
+                youtubeLink: null
+            },
+            foto2: {
+                title: "Illustration & Design Projekt 2",
+                description: "Beschreibung für Illustration & Design Projekt 2",
+                media: '<img src="images/foto2.jpg" alt="Foto 2" style="width:100%; border-radius: 1rem;">',
+                youtubeLink: null
+            },
+            foto3: {
+                title: "Illustration & Design Projekt 3",
+                description: "Beschreibung für Illustration & Design Projekt 3",
+                media: '<img src="images/foto3.jpg" alt="Foto 3" style="width:100%; border-radius: 1rem;">',
+                youtubeLink: null
+            }
+        };
+
+        function openModal(projectId) {
+            const project = projects[projectId];
+            if (project) {
+                document.getElementById('modalTitle').textContent = project.title;
+                document.getElementById('modalDescription').textContent = project.description;
+                document.getElementById('modalMedia').innerHTML = project.media;
+                
+                // YouTube-Link und Tasks anzeigen wenn vorhanden
+                const youtubeDiv = document.getElementById('modalYouTubeLink');
+                let tasksHTML = '';
+                
+                if (project.tasks && project.tasks.length > 0) {
+                    tasksHTML = `<div style="margin-bottom: 1rem;">
+                        <h3 style="color: #f1c0c0; margin-bottom: 0.5rem; font-size: 1rem;">Meine Aufgaben:</h3>
+                        <ul style="list-style: none; padding-left: 0; margin: 0;">
+                            ${project.tasks.map(task => `<li style="padding: 0.25rem 0; color: #2F2A25;">${task}</li>`).join('')}
+                        </ul>
+                    </div>`;
+                }
+                
+                let youtubeHTML = '';
+                if (project.youtubeLink) {
+                    youtubeHTML = `<a href="${project.youtubeLink}" target="_blank" class="youtube-btn">🎬 Auf YouTube anschauen</a>`;
+                }
+                
+                youtubeDiv.innerHTML = tasksHTML + youtubeHTML;
+                document.getElementById('projectModal').style.display = 'block';
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('projectModal').style.display = 'none';
+        }
+
+        // Modal schließen wenn man außerhalb klickt
+        window.onclick = function(event) {
+            const modal = document.getElementById('projectModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
 
 </body>
 </html>

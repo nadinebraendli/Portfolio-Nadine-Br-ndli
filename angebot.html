@@ -34,54 +34,177 @@
 
         <!-- Skills -->
         <section class="angebot-skills">
-            <div class="cards">
-                <div class="card lavender">
-                    <h3>video & film</h3>
-                    <ul>
-                        <li>Video- und Postproduktion</li>
-                        <li>Non-fiktionale Videoformate</li>
-                        <li>Storyboarding & Storytelling</li>
-                        <li>2D Animation</li>
-                    </ul>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>🎬 video & film</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="skill-item">
+                            <span class="skill-name">Video- und Postproduktion</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Non-fiktionale Videoformate</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Storyboarding & Storytelling</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">2D Animation</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="card lavender">
-                    <h3>illustration & design</h3>
-                    <ul>
-                        <li>Content Creation</li>
-                        <li>Redaktionsplanung</li>
-                        <li>Community Management</li>
-                    </ul>
-                </div>
-                <div class="card lavender">
-                    <h3>social media & content</h3>
-                    <ul>
-                        <li>Portrait & Lifestyle</li>
-                        <li>Produktfotografie</li>
-                        <li>Bildbearbeitung</li>
-                    </ul>
-                </div>
-                <div class="card lavender">
-                    <h3>lernend</h3>
-                    <ul>
-                        <li>Logo & Branding</li>
-                        <li>Printdesign</li>
-                        <li>Illustrationen</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
 
-        <!-- Tools -->
-        <section class="angebot-tools">
-            <div class="card lavender" style="max-width: 400px; margin: 2rem auto;">
-                <h3>programme & tools</h3>
-                <ul>
-                    <li>Adobe Photoshop</li>
-                    <li>Adobe Premiere Pro</li>
-                    <li>Adobe Illustrator</li>
-                    <li>Final Cut Pro</li>
-                    <li>DaVinci Resolve</li>
-                </ul>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>🎨 illustration & design</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="skill-item">
+                            <span class="skill-name">Digitale Illustration & Zeichnung</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Layout & Typografie</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Kreative Konzepte & Visualisierung</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>📱 social media & content</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="skill-item">
+                            <span class="skill-name">Social Media Content & Management</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Storytelling für digitale Plattformen</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>📚 lernend</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="skill-item">
+                            <span class="skill-name">Fotografie & Bildbearbeitung</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">3D-Visualisierung</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 60%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Interaktive Medien</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 65%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>⚙️ tools</span>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="skill-item">
+                            <span class="skill-name">Premiere Pro</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">CapCut</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">ProCreate</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">InDesign</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Illustrator</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Photoshop</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Canva</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Figma</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">After Effects</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -97,11 +220,46 @@
         <div class="footer-content">
             <p>&copy; 2025 Nadine Brändli</p>
             <ul class="social-links">
-                <li><a href="#">Instagram</a></li>
-                <li><a href="#">LinkedIn</a></li>
-                <li><a href="#">E-Mail</a></li>
+                <li><a href="https://www.instagram.com/nadinebraendli/" target="_blank">Instagram</a></li>
+                <li><a href="https://www.linkedin.com/in/nadine-elena-br%C3%A4ndli-325a34291/" target="_blank">LinkedIn</a></li>
+                <li><a href="kontakt.html">E-Mail</a></li>
             </ul>
         </div>
     </footer>
+
+    <script>
+        function toggleAccordion(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('.accordion-icon');
+            
+            // Schließe alle anderen offenen Akkordeons
+            const allContents = document.querySelectorAll('.accordion-content');
+            const allIcons = document.querySelectorAll('.accordion-icon');
+            
+            allContents.forEach(c => {
+                if (c !== content) {
+                    c.style.maxHeight = null;
+                    c.style.padding = '0 1.5rem';
+                }
+            });
+            
+            allIcons.forEach(i => {
+                if (i !== icon) {
+                    i.textContent = '+';
+                }
+            });
+            
+            // Toggle aktuelles Akkordeon
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+                content.style.padding = '0 1.5rem';
+                icon.textContent = '+';
+            } else {
+                content.style.maxHeight = content.scrollHeight + 'px';
+                content.style.padding = '1.5rem';
+                icon.textContent = '−';
+            }
+        }
+    </script>
 </body>
 </html>
