@@ -308,14 +308,14 @@ footer .social-links li a {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 3rem 4rem;
+    padding: 1rem 4rem 3rem 4rem;
     background: linear-gradient(to bottom, #b7e4c7, #fef5f0); /* sanfter Farbverlauf */
     gap: 2rem;
     margin-bottom: 3rem;
 }
 
 .about-hero-img {
-    max-width: 400px;
+    max-width: 550px;
     height: auto;
     border-radius: 1rem;
 }
@@ -568,6 +568,12 @@ footer.footer-angebot {
     margin: 3rem auto;
 }
 
+.angebot-skills h2 {
+    font-size: 2rem;
+    margin: 2rem 0 1.5rem 0;
+    color: #2F2A25;
+}
+
 .accordion {
     border-radius: 1rem;
     overflow: hidden;
@@ -645,7 +651,7 @@ footer.footer-angebot {
 
 .skill-progress {
     height: 100%;
-    background-color: #d7bde2;
+    background-color: #8b6ba8;
     border-radius: 5px;
     transition: width 0.5s ease;
     animation: progressFill 0.8s ease-out;
