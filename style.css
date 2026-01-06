@@ -1,3 +1,7 @@
+footer.footer-kontakt {
+    background-color: #FCE9A0; /* Kontakt-Seite */
+}
+
 /* Grundstil */
 body {
     font-family: 'Lora', serif; /* Default Fliesstext */
@@ -109,10 +113,10 @@ nav a {
 
 
 /* Farben der Karten */
-.mint { background-color: #b7e4c7; }
-.rose { background-color: #f1c0c0; }
-.lavender { background-color: #d7bde2; }
-.yellow { background-color: #fff1b6; }
+.mint { background-color: #B6E2D3; }
+.rose { background-color: #E6A5A1; }
+.lavender { background-color: #CDB4DB; }
+.yellow { background-color: #FCE9A0; }
 
 /* Fjalla One für alle Überschriften */
 h1, h2, h3, h4, h5, h6 {
@@ -125,11 +129,11 @@ footer.footer-home {
 }
 
 footer.footer-about {
-    background-color: #b7e4c7; /* About-Seite */
+    background-color: #B6E2D3; /* About-Seite */
 }
 
 footer.footer-portfolio {
-    background-color: #f1c0c0; /* Portfolio-Seite */
+    background-color: #E6A5A1; /* Portfolio-Seite */
 }
 
 /* allgemeine Footer-Stile */
@@ -216,7 +220,7 @@ footer .social-links li a {
 }
 
 .flip-card-back {
-    background-color: #b7e4c7;
+    background-color: #B6E2D3;
     color: #2F2A25;
     transform: rotateY(180deg);
     padding: 2rem;
@@ -278,7 +282,7 @@ footer .social-links li a {
     top: 0;
     width: 3px;
     height: 100%;
-    background-color: #b7e4c7; /* Mint */
+    background-color: #B6E2D3; /* Mint */
 }
 
 /* Eintrag */
@@ -307,17 +311,20 @@ footer .social-links li a {
 .about-hero {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     padding: 1rem 4rem 3rem 4rem;
-    background: linear-gradient(to bottom, #b7e4c7, #fef5f0); /* sanfter Farbverlauf */
+    background-image: url('images/aboutme.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 700px;
     gap: 2rem;
     margin-bottom: 3rem;
+    position: relative;
 }
 
 .about-hero-img {
-    max-width: 550px;
-    height: auto;
-    border-radius: 1rem;
+    display: none;
 }
 
 .about-hero-text {
@@ -338,20 +345,24 @@ footer .social-links li a {
 }
 
 /* Portfolio-Hero */
+
 .portfolio-hero {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     padding: 3rem 4rem;
-    background: linear-gradient(to bottom, #f1c0c0, #FFF7F2);
+    background-image: url('images/portfolio.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 600px;
     gap: 2rem;
     margin-bottom: 3rem;
+    position: relative;
 }
 
 .portfolio-hero-img {
-    max-width: 300px;
-    height: auto;
-    border-radius: 1rem;
+    display: none;
 }
 
 .portfolio-hero-text {
@@ -390,7 +401,7 @@ footer .social-links li a {
 
 
 .project-box {
-    background-color: #f1c0c0; /* rosa wie auf der Startseite */
+    background-color: #E6A5A1; /* rosa wie auf der Startseite */
     padding: 2rem;
     border-radius: 1rem;
     text-align: center;
@@ -406,7 +417,7 @@ footer .social-links li a {
     align-items: center;
     justify-content: center;
     padding: 3rem 4rem;
-    background: linear-gradient(to bottom, #d7bde2, #fef5f0); /* Lavender-Gradient */
+    background: linear-gradient(to bottom, #CDB4DB, #fef5f0); /* Lavender-Gradient */
     gap: 2rem;
     margin-bottom: 3rem;
 }
@@ -433,7 +444,7 @@ footer .social-links li a {
 /* Boxenfarben: Violett */
 .angebot-skills .card,
 .angebot-tools .card {
-    background-color: #d7bde2; /* Lavender wie auf Startseite */
+    background-color: #CDB4DB; /* Lavender wie auf Startseite */
     padding: 1.5rem;
     border-radius: 1rem;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
@@ -460,7 +471,7 @@ footer .social-links li a {
 
 /* Footer für Angebotsseite */
 footer.footer-angebot {
-    background-color: #d7bde2; /* Violett */
+    background-color: #CDB4DB; /* Violett */
     padding: 2rem;
     text-align: center;
     color: #2F2A25;
@@ -473,7 +484,7 @@ footer.footer-angebot {
     align-items: center;
     justify-content: center;
     padding: 3rem 4rem;
-    background: linear-gradient(to bottom, #fff1b6, #fef5f0); /* Gelb wie auf Startseite */
+    background: linear-gradient(to bottom, #FCE9A0, #fef5f0); /* Gelb wie auf Startseite */
     gap: 2rem;
     margin-bottom: 3rem;
 }
@@ -535,7 +546,7 @@ footer.footer-angebot {
 .kontakt-form input,
 .kontakt-form textarea {
     padding: 0.7rem;
-    border: 2px solid #fff1b6;
+    border: 2px solid #FCE9A0;
     border-radius: 0.5rem;
     font-family: 'Fjalla One', sans-serif;
     font-size: 1rem;
@@ -549,15 +560,36 @@ footer.footer-angebot {
 
 /* Button */
 .kontakt-form button {
-    width: 60%;  /* ebenfalls schön zentriert */
-    padding: 0.8rem;
-    background-color: #fff1b6;
+    width: auto;
+    padding: 0.7rem 1.6rem;
+    background-color: #FCE9A0;
     border: none;
-    border-radius: 0.5rem;
+    border-radius: 999px;
     font-family: 'Fjalla One', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     cursor: pointer;
     margin-top: 0.5rem;
+    white-space: nowrap;
+}
+
+/* Kontakt-Seite: Button-Zeile */
+.kontakt-buttons {
+    margin-bottom: 1rem;
+}
+
+.kontakt-buttons-row {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.kontakt-button-link {
+    text-decoration: none;
+}
+
+.kontakt-button:hover {
+    filter: brightness(0.95);
 }
 
 
@@ -581,7 +613,7 @@ footer.footer-angebot {
 }
 
 .accordion-item {
-    border-bottom: 2px solid #d7bde2;
+    border-bottom: 2px solid #CDB4DB;
 }
 
 .accordion-item:last-child {
@@ -768,7 +800,7 @@ footer.footer-angebot {
 }
 
 .close:hover {
-    color: #f1c0c0;
+    color: #E6A5A1;
 }
 
 /* Hover-Effekt für Project Boxes */
