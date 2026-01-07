@@ -36,10 +36,6 @@
         <section class="portfolio-category">
             <h2>video & film</h2>
             <div class="portfolio-projects">
-                <div class="project-box" onclick="openModal('video1')">
-                    <img src="images/video1.jpg" alt="Projekt Video 1" style="width:100%; border-radius: 1rem;">
-                    <p>Reitsport hautnah - Ein POV-Erlebnis</p>
-                </div>
                 <div class="project-box" onclick="openModal('video2')">
                     <img src="https://img.youtube.com/vi/W7BimKeXGak/maxresdefault.jpg" alt="Aufstieg zum Dach Afrikas – 7 Tage Kilimandscharo" style="width:100%; border-radius: 1rem;">
                     <p>Aufstieg zum Dach Afrikas – 7 Tage Kilimandscharo</p>
@@ -51,6 +47,24 @@
                 <div class="project-box" onclick="openModal('video4')">
                     <img src="https://img.youtube.com/vi/yBEAAd84Kgg/maxresdefault.jpg" alt="ASMR Video - Pferde Edition" style="width:100%; border-radius: 1rem;">
                     <p>ASMR Video - Pferde Edition</p>
+                </div>
+                <div class="project-box" onclick="openModal('video5')">
+                    <img src="https://img.youtube.com/vi/MpbyxKqFQRc/maxresdefault.jpg" alt="Reitsport hautnah - Tag 1" style="width:100%; border-radius: 1rem;">
+                    <p>Reitsport hautnah - Tag 1: Sattelpflege und Stallarbeit</p>
+                </div>
+                <div class="project-box" onclick="openModal('video6')">
+                    <img src="https://img.youtube.com/vi/01qPz7QTCws/maxresdefault.jpg" alt="Reitsport hautnah - Tag 2" style="width:100%; border-radius: 1rem;">
+                    <p>Reitsport hautnah - Tag 2: Stallarbeit und Bodenarbeit</p>
+                </div>
+                <div class="project-box" onclick="openModal('video7')">
+                    <img src="https://img.youtube.com/vi/xljKvMAPVQI/maxresdefault.jpg" alt="Reitsport hautnah - Tag 3" style="width:100%; border-radius: 1rem;">
+                    <p>Reitsport hautnah - Tag 3: Stallarbeit und Reiten</p>
+                </div>
+                <div class="project-box coming-soon">
+                    <div class="coming-soon-placeholder" style="width:100%; aspect-ratio: 16/9; background-color: #e0e0e0; border-radius: 1rem; display: flex; align-items: center; justify-content: center;">
+                        <p style="font-size: 1rem; color: #888;">wird bald veröffentlicht</p>
+                    </div>
+                    <p>Gratwanderung</p>
                 </div>
             </div>
         </section>
@@ -111,7 +125,7 @@
 
     <footer class="footer-portfolio">
         <div class="footer-content">
-            <p>&copy; 2025 Nadine Brändli</p>
+            <p>&copy; 2026 Nadine Brändli</p>
             <ul class="social-links">
                 <li><a href="https://www.instagram.com/nadinebraendli/" target="_blank">Instagram</a></li>
                 <li><a href="https://www.linkedin.com/in/nadine-elena-br%C3%A4ndli-325a34291/" target="_blank">LinkedIn</a></li>
@@ -132,7 +146,7 @@
             },
             video2: {
                 title: "Aufstieg zum Dach Afrikas – 7 Tage Kilimandscharo",
-                description: "Eine Dokumentation über die Reise zum Kilimandscharo. Zeigt die atemberaubende Landschaft und persönliche Momente der Expedition.",
+                description: "Eine kurze Dokumentation meines Aufstiegs auf den höchsten Berg Afrikas. Das Video zeigt atemberaubende Landschaften, persönliche Momente und die physischen und mentalen Herausforderungen.",
                 tasks: ['Kamera', 'Schnitt'],
                 media: '<img src="https://img.youtube.com/vi/W7BimKeXGak/maxresdefault.jpg" alt="Aufstieg zum Dach Afrikas – 7 Tage Kilimandscharo" style="width:100%; border-radius: 1rem;">',
                 youtubeLink: 'https://youtu.be/W7BimKeXGak'
@@ -151,9 +165,30 @@
                 media: '<img src="https://img.youtube.com/vi/yBEAAd84Kgg/maxresdefault.jpg" alt="ASMR Video - Pferde Edition" style="width:100%; border-radius: 1rem;">',
                 youtubeLink: 'https://youtu.be/yBEAAd84Kgg'
             },
+            video5: {
+                title: "Reitsport hautnah - Tag 1: Sattelpflege und Stallarbeit",
+                description: "Ein Blick hinter die Kulissen des Reitsports. Dieser Teil zeigt die tägliche Arbeit rund um Sattelpflege und Stallarbeit.",
+                tasks: ['Kamera', 'Regie', 'Schnitt'],
+                media: '<img src="https://img.youtube.com/vi/MpbyxKqFQRc/maxresdefault.jpg" alt="Reitsport hautnah - Tag 1" style="width:100%; border-radius: 1rem;">',
+                youtubeLink: 'https://youtu.be/MpbyxKqFQRc'
+            },
+            video6: {
+                title: "Reitsport hautnah - Tag 2: Stallarbeit und Bodenarbeit",
+                description: "Der zweite Teil der Reitsport-Serie zeigt die tägliche Stallarbeit und Bodenarbeit mit den Pferden.",
+                tasks: ['Kamera', 'Regie', 'Schnitt'],
+                media: '<img src="https://img.youtube.com/vi/01qPz7QTCws/maxresdefault.jpg" alt="Reitsport hautnah - Tag 2" style="width:100%; border-radius: 1rem;">',
+                youtubeLink: 'https://youtu.be/01qPz7QTCws'
+            },
+            video7: {
+                title: "Reitsport hautnah - Tag 3: Stallarbeit und Reiten",
+                description: "Der dritte Teil der Reitsport-Serie zeigt Stallarbeit und das Reiten selbst.",
+                tasks: ['Kamera', 'Regie', 'Schnitt'],
+                media: '<img src="https://img.youtube.com/vi/xljKvMAPVQI/maxresdefault.jpg" alt="Reitsport hautnah - Tag 3" style="width:100%; border-radius: 1rem;">',
+                youtubeLink: 'https://youtu.be/xljKvMAPVQI'
+            },
             social1: {
                 title: "Auf Tour mit Andrea Bignasca",
-                description: "Beschreibung für Social Media Projekt 1",
+                description: "Ich durfte Andrea Bignasca auf seiner Tour durch die Schweiz filmisch begleiten.",
                 tasks: ['Video'],
                 media: '<img src="https://img.youtube.com/vi/WZR0yEJ_FYg/maxresdefault.jpg" alt="Auf Tour mit Andrea Bignasca" style="width:100%; border-radius: 1rem;">',
                 youtubeLink: 'https://youtu.be/WZR0yEJ_FYg'
