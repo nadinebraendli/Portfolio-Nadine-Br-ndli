@@ -462,25 +462,33 @@ footer .social-links li a {
 
 /* Hero für Angebotsseite in Violett */
 .angebot-hero {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 3rem 4rem;
-    background: linear-gradient(to bottom, #CDB4DB, #fef5f0); /* Lavender-Gradient */
-    gap: 2rem;
+    position: relative;
+    width: 100%;
+    height: 500px;
     margin-bottom: 3rem;
+    overflow: hidden;
 }
 
 .angebot-hero-img {
-    max-width: 400px;
-    height: auto;
-    border-radius: 1rem;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.angebot-hero-text {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 .angebot-hero-text h1 {
     font-family: 'Fjalla One', sans-serif;
     font-size: 12rem;
-    margin: 0 0 1rem 0;
+    margin: 0;
+    color: #2F2A25;
 }
 
 .angebot-hero-text p {
