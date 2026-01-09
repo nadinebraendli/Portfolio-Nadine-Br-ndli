@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Lora&display=swap" rel="stylesheet">
 </head>
 <body class="portfolio-page">
-    <!-- Header -->
+    
     <header>
         <a href="index.html">
             <img src="images/nur-logo-nadine.png" alt="Nadine Brändli Logo" class="logo">
@@ -29,7 +29,7 @@
     </header>
 
     <main>
-        <!-- Portfolio Hero -->
+       
         <section class="hero">
             <img src="images/portfolio.png" alt="Portfolio Hero" class="hero-img">
             <div class="hero-text">
@@ -37,7 +37,7 @@
             </div>
         </section>
 
-        <!-- Kategorie: Video & Film -->
+       
         <section class="portfolio-category">
             <h2>video & film</h2>
             <div class="portfolio-projects">
@@ -74,7 +74,7 @@
             </div>
         </section>
 
-        <!-- Kategorie: Social Media -->
+       
         <section class="portfolio-category">
             <h2>social media & content</h2>
             <div class="portfolio-projects">
@@ -93,7 +93,7 @@
             </div>
         </section>
 
-        <!-- Kategorie: Illustration & Design -->
+        
         <section class="portfolio-category">
             <h2>illustration & design</h2>
             <div class="portfolio-projects">
@@ -117,7 +117,7 @@
         </section>
     </main>
 
-    <!-- Modal für Video/Social Projekte -->
+    
     <div id="projectModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
@@ -132,7 +132,7 @@
         </div>
     </div>
 
-    <!-- Galerie Modal für Illustration & Design -->
+    
     <div id="galleryModal" class="modal">
         <div class="modal-content gallery-modal-content">
             <span class="close" onclick="closeGallery()">&times;</span>
@@ -166,7 +166,7 @@
     </footer>
 
     <script>
-        // Projekt-Daten für Video/Social
+      
         const projects = {
             video1: {
                 title: "Reitsport hautnah - Ein POV-Erlebnis",
@@ -246,7 +246,7 @@
             }
         };
 
-        // Galerie-Daten für Illustration & Design
+        
         const galleries = {
             sketchdraw: {
                 title: "Sketch & Draw",
@@ -284,7 +284,7 @@
             }
         };
 
-        // Galerie-State
+       
         let currentGallery = null;
         let currentImageIndex = 0;
 
@@ -321,7 +321,7 @@
             document.getElementById('projectModal').style.display = 'none';
         }
 
-        // Galerie-Funktionen
+       
         function openGallery(galleryId) {
             currentGallery = galleries[galleryId];
             currentImageIndex = 0;
@@ -386,7 +386,6 @@
             updateGalleryImage();
         }
 
-        // Keyboard Navigation
         document.addEventListener('keydown', function(e) {
             const galleryModal = document.getElementById('galleryModal');
             if (galleryModal.style.display === 'block') {
@@ -401,7 +400,7 @@
             }
         });
 
-        // Modal schließen wenn man außerhalb klickt
+        
         window.onclick = function(event) {
             const projectModal = document.getElementById('projectModal');
             const galleryModal = document.getElementById('galleryModal');

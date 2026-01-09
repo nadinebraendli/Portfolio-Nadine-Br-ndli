@@ -1,4 +1,4 @@
-/* Desktop: left-align hero heading for portfolio and kontakt */
+
 @media (min-width: 769px) {
     .portfolio-page .hero-text,
     .kontakt-page .hero-text {
@@ -21,14 +21,13 @@
         padding-right: 2.5rem !important;
     }
 }
-/* --- Kein Inhalt soll über die Bildschirmbreite hinausgehen --- */
+
 html, body, main, section, header, footer {
     box-sizing: border-box;
     max-width: 100vw;
     overflow-x: hidden;
 }
-/* Hero-Bilder: Immer volle Breite, nie abgeschnitten */
-/* Hero-Bilder: Immer volle Breite, nie abgeschnitten */
+
             .portfolio-page .hero-text,
             .kontakt-page .hero-text {
                 text-align: left !important;
@@ -43,8 +42,7 @@ html, body, main, section, header, footer {
                 max-width: 90vw !important;
                 max-width: 90vw !important;
             }
-}
-/* Responsive Hero Sections */
+
 @media (max-width: 768px) {
     .hero-text {
         position: static;
@@ -69,16 +67,16 @@ html, body, main, section, header, footer {
     }
             .portfolio-page .hero-text,
             .kontakt-page .hero-text {
-                text-align: left !important;
-                position: absolute !important;
-                left: 0 !important;
-                right: auto !important;
-                top: 50% !important;
-                transform: translateY(-50%) !important;
-                padding-left: 0.3rem !important;
-                padding-right: 0 !important;
-                width: auto !important;
-                max-width: 90vw !important;
+                 text-align: left !important;
+                 position: absolute !important;
+                 left: 0 !important;
+                 right: auto !important;
+                 top: 50% !important;
+                 transform: translateY(-50%) !important;
+                 padding-left: 7vw !important;
+                 padding-right: 0 !important;
+                 width: auto !important;
+                 max-width: 90vw !important;
             }
     .about-hero-text h1,
     .portfolio-hero-text h1,
@@ -101,8 +99,7 @@ html, body, main, section, header, footer {
     .kontakt-hero-text h1 {
         font-size: 1.4rem;
     }
-}
-/* Responsive Footer */
+
 @media (max-width: 768px) {
     footer, .footer-content {
         padding: 0.7rem 0.2rem !important;
@@ -220,7 +217,7 @@ html, body, main, section, header, footer {
         max-height: 90px;
     }
 }
-/* Hamburger-Menü Styles */
+
 .nav-toggle {
     display: none;
     flex-direction: column;
@@ -275,9 +272,7 @@ html, body, main, section, header, footer {
         padding: 0.5rem 0;
     }
 }
-/* ========================= */
-/* RESPONSIVE BREAKPOINTS    */
-/* ========================= */
+
 
 @media (max-width: 768px) {
     header {
@@ -374,12 +369,11 @@ html, body, main, section, header, footer {
     }
 }
 footer.footer-kontakt {
-    background-color: #FCE9A0; /* Kontakt-Seite */
+    background-color: #FCE9A0;
 }
 
-/* Grundstil */
 body {
-    font-family: 'Lora', serif; /* Default Fliesstext */
+    font-family: 'Lora', serif;
     margin: 0;
     padding: 0;
     background-color: #FFF7F2;
@@ -387,21 +381,21 @@ body {
     font-size: 1rem;
 }
 
-/* Header */
+
 header {
     display: flex;
-    align-items: center;        /* vertikal zentriert */
-    justify-content: space-between; /* Logo links, Navigation rechts */
+    align-items: center;       
+    justify-content: space-between; 
     background-color: #FFF7F2;
     padding: 1rem 2rem;
 }
 
 header .logo {
-    max-height: 80px;  /* Höhe des Logos */
-    width: auto;       /* proportional skalieren */
+    max-height: 80px;  
+    width: auto;       
 }
 
-/* Navigation */
+
 nav ul {
     display: flex;
     justify-content: flex-end;
@@ -412,7 +406,7 @@ nav ul {
 }
 
 nav a {
-    font-family: 'Fjalla One', sans-serif; /* Fjalla One für Navigation */
+    font-family: 'Fjalla One', sans-serif; 
     text-decoration: none;
     color: #2F2A25;
     font-weight: bold;
@@ -420,7 +414,7 @@ nav a {
     transition: color 0.3s ease;
 }
 
-/* Standard-Hover: Pfirsich (Startseite) */
+
 nav a:hover {
     color: #F8B88B;
 }
@@ -437,8 +431,7 @@ body.kontakt-page nav a:hover {
     color: #FCE9A0;
 }
 
-/* Standard: Rosa (Portfolio)
-   Überschrieben durch page-spezifische Klassen */
+
 nav a.active {
     color: #E6A5A1;
     border-bottom: 2px solid #E6A5A1;
@@ -462,13 +455,13 @@ body.index-page nav a.active {
     border-bottom: 2px solid #F8B88B;
 }
 
-/* Hero auf Startseite */
+
 .hero {
     position: relative;
     width: 100%;
     margin-bottom: 3rem;
 }
-
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 .hero-img {
     width: 100%;
     height: auto;
@@ -490,7 +483,7 @@ body.index-page nav a.active {
     color: #2F2A25;
 }
 
-/* Kartenbereich */
+
 .cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -499,6 +492,13 @@ body.index-page nav a.active {
     padding: 2rem 1.5rem 4rem 1.5rem;
     max-width: 900px;
     margin: 0 auto;
+}
+
+@media (min-width: 1200px) {
+    .cards {
+        padding-left: 8vw !important;
+        padding-right: 8vw !important;
+    }
 }
 
 .card {
@@ -542,31 +542,31 @@ body.index-page nav a.active {
 }
 
 
-/* Farben der Karten */
+
 .mint { background-color: #B6E2D3; }
 .rose { background-color: #E6A5A1; }
 .lavender { background-color: #CDB4DB; }
 .yellow { background-color: #FCE9A0; }
 
-/* Fjalla One für alle Überschriften */
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Fjalla One', sans-serif;
 }
 
-/* Footer – individuell pro Seite */
+
 footer.footer-home {
-    background-color: #F8B88B; /* Startseite */
+    background-color: #F8B88B;
 }
 
 footer.footer-about {
-    background-color: #B6E2D3; /* About-Seite */
+    background-color: #B6E2D3; 
 }
 
 footer.footer-portfolio {
-    background-color: #E6A5A1; /* Portfolio-Seite */
+    background-color: #E6A5A1; 
 }
 
-/* allgemeine Footer-Stile */
+
 footer {
     padding: 2rem;
     text-align: center;
@@ -597,7 +597,7 @@ footer .social-links li a {
     transition: color 0.3s;
 }
 
-/* About-Section */
+
 .about {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -605,7 +605,7 @@ footer .social-links li a {
     padding: 2rem 4rem;
 }
 
-/* About Simple Layout */
+
 .about-simple {
     padding: 2rem 4rem;
 }
@@ -644,13 +644,19 @@ footer .social-links li a {
 }
 
 .about-image img {
-    width: 300px;
-    height: 350px;
+    width: 100%;
+    max-width: 320px;
+    aspect-ratio: 4/5;
+    height: auto;
+    min-height: 0;
     border-radius: 1rem;
     object-fit: cover;
+    object-position: center;
+    display: block;
+    margin: 0 auto;
 }
 
-/* Flip Card Styles */
+
 .flip-card {
     background-color: transparent;
     width: 100%;
@@ -730,7 +736,7 @@ footer .social-links li a {
     line-height: 1.5;
 }
 
-/* TIMELINE SECTION */
+
 .timeline-section {
     padding: 2rem 4rem 4rem 4rem;
 }
@@ -741,7 +747,7 @@ footer .social-links li a {
     font-size: 2.2rem;
 }
 
-/* Timeline Container */
+
 .timeline {
     position: relative;
     margin: 0 auto;
@@ -749,7 +755,7 @@ footer .social-links li a {
     max-width: 700px;
 }
 
-/* Vertikale Linie */
+
 .timeline::before {
     content: "";
     position: absolute;
@@ -757,16 +763,16 @@ footer .social-links li a {
     top: 0;
     width: 3px;
     height: 100%;
-    background-color: #B6E2D3; /* Mint */
+    background-color: #B6E2D3; 
 }
 
-/* Eintrag */
+
 .timeline-item {
     margin-bottom: 2rem;
     padding-left: 2rem;
 }
 
-/* Jahr */
+
 .timeline-item .year {
     font-family: 'Fjalla One', sans-serif;
     font-size: 1.4rem;
@@ -774,7 +780,7 @@ footer .social-links li a {
     margin-bottom: 0.3rem;
 }
 
-/* Text */
+
 .timeline-item p {
     margin: 0;
     font-family: 'Lora', serif;
@@ -782,9 +788,7 @@ footer .social-links li a {
 }
 
 
-/* About-Hero-Bereich */
-/* About-Hero-Bereich Desktop: Bild und Text nebeneinander, Bild maximal so breit wie der Container */
-/* About-Hero wie andere Hero-Bereiche: Text über Bild, rechtsbündig */
+
 .about-hero {
     position: relative;
     width: 100%;
@@ -792,7 +796,7 @@ footer .social-links li a {
     min-height: 320px;
 }
 
-/* About-Hero-Bild exakt wie andere Hero-Bilder */
+
 .about-hero-img {
     width: 100vw;
     max-width: 100vw;
@@ -804,7 +808,7 @@ footer .social-links li a {
     background: #fff7f2;
 }
 
-/* Einheitliche Behandlung aller Hero-Bilder (außer about-hero-img im Desktop) */
+
 .hero-img,
 .portfolio-hero-img,
 .angebot-hero-img,
@@ -875,7 +879,7 @@ footer .social-links li a {
     }
 }
 
-/* Textbox über Bild, rechtsbündig */
+
 .about-hero-text {
     position: absolute;
     top: 50%;
@@ -900,7 +904,7 @@ footer .social-links li a {
     margin: 0;
 }
 
-/* Portfolio-Hero */
+
 
 .portfolio-hero {
     position: relative;
@@ -936,7 +940,7 @@ footer .social-links li a {
     margin: 0;
 }
 
-/* Portfolio Kategorien */
+
 .portfolio-category h2 {
     font-family: 'Fjalla One', sans-serif;
     font-size: 2rem;
@@ -944,18 +948,18 @@ footer .social-links li a {
     text-align: center;
 }
 
-/* Projekt-Boxen */
+
 .portfolio-projects {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-bottom: 3rem;
-    padding: 0 4rem; /* Abstand links und rechts */
+    padding: 0 4rem; 
 }
 
 
 .project-box {
-    background-color: #E6A5A1; /* rosa wie auf der Startseite */
+    background-color: #E6A5A1; 
     padding: 2rem;
     border-radius: 1rem;
     text-align: center;
@@ -965,7 +969,7 @@ footer .social-links li a {
     transition: transform 0.3s;
 }
 
-/* Einheitliche Bildgrösse in Project-Boxen */
+
 .project-box img {
     width: 100%;
     aspect-ratio: 16 / 9;
@@ -977,7 +981,7 @@ footer .social-links li a {
     margin: 1rem 0 0 0;
 }
 
-/* Hero für Angebotsseite in Violett */
+
 .angebot-hero {
     position: relative;
     width: 100%;
@@ -1012,16 +1016,16 @@ footer .social-links li a {
     margin: 0;
 }
 
-/* Boxenfarben: Violett */
+
 .angebot-skills .card,
 .angebot-tools .card {
-    background-color: #CDB4DB; /* Lavender wie auf Startseite */
+    background-color: #CDB4DB; 
     padding: 1.5rem;
     border-radius: 1rem;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-/* Titel in den Boxen */
+
 .angebot-skills .card h3,
 .angebot-tools .card h3 {
     font-family: 'Fjalla One', sans-serif;
@@ -1030,7 +1034,7 @@ footer .social-links li a {
     text-align: center;
 }
 
-/* Listen in den Boxen */
+
 .angebot-skills .card ul,
 .angebot-tools .card ul {
     font-family: 'Lora', serif;
@@ -1040,16 +1044,16 @@ footer .social-links li a {
     padding-left: 1.2rem;
 }
 
-/* Footer für Angebotsseite */
+
 footer.footer-angebot {
-    background-color: #CDB4DB; /* Violett */
+    background-color: #CDB4DB; 
     padding: 2rem;
     text-align: center;
     color: #2F2A25;
 }
 
 
-/* Hero Kontaktseite */
+
 .kontakt-hero {
     position: relative;
     width: 100%;
@@ -1084,7 +1088,7 @@ footer.footer-angebot {
     margin: 0;
 }
 
-/* Kontakt Info Sektion */
+
 .kontakt-info {
     display: flex;
     flex-direction: column;
@@ -1113,7 +1117,7 @@ footer.footer-angebot {
     color: #2F2A25;
 }
 
-/* Kontaktformular Wrapper */
+
 .kontakt-form {
     display: flex;
     justify-content: center;
@@ -1121,49 +1125,9 @@ footer.footer-angebot {
     margin-top: 2rem;
 }
 
-.kontakt-form form {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* zentriert alles */
-    gap: 0.6rem;
-    max-width: 500px;
-    width: 100%;
-}
 
-/* Labels */
-.kontakt-form label {
-    font-family: 'Fjalla One', sans-serif;
-    font-size: 1rem;
-    align-self: flex-start; /* Text bündig links */
-}
 
-/* Inputs & Textareas */
-.kontakt-form input[type="text"],
-.kontakt-form input[type="email"],
-.kontakt-form input[type="subject"] {
-    width: 60%;        /* kürzere Felder */
-}
 
-.kontakt-form textarea {
-    width: 100%;       /* Textarea schön breit */
-}
-
-.kontakt-form input,
-.kontakt-form textarea {
-    padding: 0.7rem;
-    border: 2px solid #FCE9A0;
-    border-radius: 0.5rem;
-    font-family: 'Fjalla One', sans-serif;
-    font-size: 1rem;
-}
-
-.kontakt-form input::placeholder,
-.kontakt-form textarea::placeholder {
-    font-family: 'Fjalla One', sans-serif;
-    font-size: 1rem;
-}
-
-/* Button */
 .kontakt-form button {
     width: auto;
     padding: 0.7rem 1.6rem;
@@ -1177,7 +1141,7 @@ footer.footer-angebot {
     white-space: nowrap;
 }
 
-/* Kontakt-Seite: Button-Zeile */
+
 .kontakt-buttons {
     margin-bottom: 1rem;
 }
@@ -1198,12 +1162,72 @@ footer.footer-angebot {
 }
 
 
-/* Akkordeon Styles */
+
 .angebot-skills {
-    padding: 2rem 4rem;
-    max-width: 900px;
-    margin: 3rem auto;
+        padding: 2rem 4rem;
+        max-width: 900px;
+        margin: 3rem auto;
 }
+
+@media (min-width: 1200px) {
+    .angebot-skills {
+        padding-left: 8vw !important;
+        padding-right: 8vw !important;
+    }
+}
+
+@media (max-width: 1200px) {
+    .angebot-skills {
+        padding: 1.5rem 2rem;
+        margin: 2rem auto;
+    }
+}
+@media (max-width: 768px) {
+    .angebot-skills {
+        padding: 1rem 0.8rem;
+        margin: 1.5rem auto;
+    }
+    .angebot-skills h2 {
+        font-size: 1.3rem;
+        margin: 1.2rem 0 1rem 0;
+    }
+    .accordion-header {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+    .accordion-content {
+        padding: 0 1rem;
+    }
+    .skill-item {
+        padding: 0.7rem 0;
+    }
+    .skill-name {
+        font-size: 0.9rem;
+    }
+    .skill-bar {
+        height: 8px;
+    }
+}
+@media (max-width: 480px) {
+    .angebot-skills {
+        padding: 0.5rem 0.2rem;
+        margin: 1rem auto;
+    }
+    .accordion-header {
+        padding: 0.7rem;
+        font-size: 0.95rem;
+    }
+    .accordion-content {
+        padding: 0 0.5rem;
+    }
+    .skill-item {
+        padding: 0.5rem 0;
+    }
+    .skill-bar {
+        height: 6px;
+    }
+}
+
 
 .angebot-skills h2 {
     font-size: 2rem;
@@ -1300,7 +1324,7 @@ footer.footer-angebot {
     }
 }
 
-/* Modal Styles */
+
 .modal {
     display: none;
     position: fixed;
@@ -1408,7 +1432,7 @@ footer.footer-angebot {
     color: #E6A5A1;
 }
 
-/* Hover-Effekt für Project Boxes */
+
 .project-box {
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -1419,7 +1443,7 @@ footer.footer-angebot {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* YouTube Button Style */
+
 .youtube-btn {
     display: inline-block;
     padding: 0.8rem 1.5rem;
@@ -1438,7 +1462,7 @@ footer.footer-angebot {
     transform: scale(1.05);
 }
 
-/* Responsive Modal */
+
 @media (max-width: 768px) {
     .modal-body {
         grid-template-columns: 1fr;
@@ -1451,9 +1475,7 @@ footer.footer-angebot {
     }
 }
 
-/* ==================== */
-/* GALERIE MODAL STYLES */
-/* ==================== */
+
 
 .gallery-modal-content {
     max-width: 900px;
@@ -1555,7 +1577,7 @@ footer.footer-angebot {
     color: #666;
 }
 
-/* Responsive Galerie */
+
 @media (max-width: 768px) {
     .gallery-modal-content {
         padding: 1rem;
@@ -1579,9 +1601,7 @@ footer.footer-angebot {
     }
 }
 
-/* --- Force full-bleed hero images on all pages (desktop + mobile) --- */
-/* Uses the 50%/50vw trick to let the image span the full viewport width
-   while the main content remains centered. Also remove any rounding. */
+
 .hero,
 .about-hero,
 .portfolio-hero,
@@ -1613,13 +1633,13 @@ footer.footer-angebot {
     margin: 0 !important;
 }
 
-/* Extra-specific full-bleed rules per page to override any container constraints */
+
 .index-page .hero,
 .about-page .about-hero,
 .portfolio-page .portfolio-hero,
 .angebot-page .angebot-hero,
 .kontakt-page .kontakt-hero {
-    /* Force true full-bleed regardless of parent padding/positioning */
+    
     position: relative !important;
     width: 100vw !important;
     max-width: 100vw !important;
@@ -1638,20 +1658,24 @@ footer.footer-angebot {
 .portfolio-page .portfolio-hero-img,
 .angebot-page .angebot-hero-img,
 .kontakt-page .kontakt-hero-img {
-    width: 100vw !important; /* fills the viewport */
+    width: 100vw !important; 
     max-width: 100vw !important;
     display: block !important;
     margin: 0 !important;
     border-radius: 0 !important;
 }
 
-/* Ensure body/html don't allow horizontal scroll from full-bleed trick */
+
 html, body {
     overflow-x: hidden !important;
 }
 
-/* Desktop: restore very large hero heading and ensure hero images are full-bleed */
+
 @media (min-width: 1200px) {
+    .about-simple {
+        padding-left: 8vw !important;
+        padding-right: 8vw !important;
+    }
     .hero h1,
     .about-hero-text h1,
     .portfolio-hero-text h1,
@@ -1661,7 +1685,7 @@ html, body {
         line-height: 1 !important;
     }
 
-    /* Force hero sections to span viewport on large screens */
+    
     .index-page .hero,
     .about-page .about-hero,
     .portfolio-page .portfolio-hero,
@@ -1688,8 +1712,7 @@ html, body {
 }
 
 
-    /* --- Responsive: Main content container, images, grids, spacing --- */
-    /* Keep main content within viewport and make grids stack on small screens */
+    
     main {
         max-width: 1200px;
         margin: 0 auto;
@@ -1697,14 +1720,14 @@ html, body {
         box-sizing: border-box;
     }
 
-    /* Ensure images never overflow their containers */
+
     img {
         max-width: 100%;
         height: auto;
         display: block;
     }
 
-    /* Make card/grid layouts single column on smaller screens */
+
     @media (max-width: 992px) {
         .cards {
             grid-template-columns: 1fr;
@@ -1728,6 +1751,22 @@ html, body {
             gap: 0.8rem;
             align-items: stretch;
         }
+            
+            .about-row, .about-row.reverse {
+                flex-direction: column !important;
+            }
+            .about-row .about-text, .about-row.reverse .about-text {
+                order: 1;
+            }
+            .about-row .about-text h2, .about-row.reverse .about-text h2 {
+                order: 1;
+            }
+            .about-row .about-text p, .about-row.reverse .about-text p {
+                order: 2;
+            }
+            .about-row .about-image, .about-row.reverse .about-image {
+                order: 3;
+            }
         .project-box, .card {
             width: 100%;
             padding-left: 0.6rem;
@@ -1746,15 +1785,15 @@ html, body {
             max-width: 100%;
             height: auto;
         }
-        /* Slightly smaller headings for very small screens */
+        
         h1 { font-size: 1.6rem; }
         h2 { font-size: 1.2rem; }
     }
 
-    /* Small safeguard: ensure no horizontal scroll from large fixed-width elements */
+    
     * { -webkit-overflow-scrolling: touch; }
 
-/* --- Force: remove rounded corners on all hero images and prevent clipping --- */
+
 img.hero-img,
 img.about-hero-img,
 img.portfolio-hero-img,
@@ -1768,7 +1807,7 @@ img.kontakt-hero-img {
     overflow: visible !important;
 }
 
-/* Strong desktop-only override: force hero containers and images to be perfectly full-bleed */
+
 @media (min-width: 769px) {
     .index-page .hero,
     .about-page .about-hero,
@@ -1802,7 +1841,7 @@ img.kontakt-hero-img {
         object-fit: cover !important;
     }
 
-    /* Aggressive: Remove all ancestor padding/margin for hero sections/images */
+    
     html, body, main, section, header, footer {
         padding-left: 0 !important;
         padding-right: 0 !important;
@@ -1812,4 +1851,4 @@ img.kontakt-hero-img {
         max-width: 100vw !important;
     }
 }
-}
+
