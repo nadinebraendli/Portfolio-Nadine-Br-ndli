@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" class="portfolio-page">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,16 +7,21 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Lora&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="portfolio-page">
     <!-- Header -->
     <header>
         <a href="index.html">
             <img src="images/nur-logo-nadine.png" alt="Nadine Brändli Logo" class="logo">
         </a>
+        <button class="nav-toggle" aria-label="Menü öffnen" onclick="toggleNav()">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
         <nav>
             <ul>
                 <li><a href="about.html">über mich</a></li>
-                <li><a href="portfolio.html">portfolio</a></li>
+                <li><a href="portfolio.html" class="active">portfolio</a></li>
                 <li><a href="angebot.html">angebot</a></li>
                 <li><a href="kontakt.html">kontakt</a></li>
             </ul>
@@ -88,27 +93,31 @@
             </div>
         </section>
 
-        <!-- Kategorie: Fotografie -->
+        <!-- Kategorie: Illustration & Design -->
         <section class="portfolio-category">
             <h2>illustration & design</h2>
             <div class="portfolio-projects">
-                <div class="project-box" onclick="openModal('foto1')">
-                    <img src="images/foto1.jpg" alt="Projekt Foto 1" style="width:100%; border-radius: 1rem;">
-                    <p>Projekt 1</p>
+                <div class="project-box" onclick="openGallery('sketchdraw')">
+                    <img src="images/sketch-draw1.jpeg" alt="Sketch & Draw" style="width:100%; border-radius: 1rem;">
+                    <p>Sketch & Draw</p>
                 </div>
-                <div class="project-box" onclick="openModal('foto2')">
-                    <img src="images/foto2.jpg" alt="Projekt Foto 2" style="width:100%; border-radius: 1rem;">
-                    <p>Projekt 2</p>
+                <div class="project-box" onclick="openGallery('rotterdam')">
+                    <img src="images/rotterdam1.jpeg" alt="Sketch & Draw Rotterdam" style="width:100%; border-radius: 1rem;">
+                    <p>Sketch & Draw Rotterdam</p>
                 </div>
-                <div class="project-box" onclick="openModal('foto3')">
-                    <img src="images/foto3.jpg" alt="Projekt Foto 3" style="width:100%; border-radius: 1rem;">
-                    <p>Projekt 3</p>
+                <div class="project-box" onclick="openGallery('gestaltgesetze')">
+                    <img src="images/gestaltgesetze1.jpeg" alt="Die 7 Gestaltgesetze" style="width:100%; border-radius: 1rem;">
+                    <p>Die 7 Gestaltgesetze</p>
+                </div>
+                <div class="project-box" onclick="openModal('animation2d')">
+                    <img src="https://img.youtube.com/vi/7zgWaA3qevE/maxresdefault.jpg" alt="2D Animation" style="width:100%; border-radius: 1rem;">
+                    <p>2D Animation</p>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Modal -->
+    <!-- Modal für Video/Social Projekte -->
     <div id="projectModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
@@ -123,11 +132,33 @@
         </div>
     </div>
 
+    <!-- Galerie Modal für Illustration & Design -->
+    <div id="galleryModal" class="modal">
+        <div class="modal-content gallery-modal-content">
+            <span class="close" onclick="closeGallery()">&times;</span>
+            <div class="gallery-header">
+                <h2 id="galleryTitle"></h2>
+                <p id="galleryDescription"></p>
+            </div>
+            <div class="gallery-container">
+                <button class="gallery-nav gallery-prev" onclick="prevImage()">&#10094;</button>
+                <div class="gallery-image-wrapper">
+                    <img id="galleryImage" src="" alt="">
+                </div>
+                <button class="gallery-nav gallery-next" onclick="nextImage()">&#10095;</button>
+            </div>
+            <div class="gallery-dots" id="galleryDots"></div>
+            <div class="gallery-counter">
+                <span id="currentIndex">1</span> / <span id="totalImages">1</span>
+            </div>
+        </div>
+    </div>
+
     <footer class="footer-portfolio">
         <div class="footer-content">
             <p>&copy; 2026 Nadine Brändli</p>
             <ul class="social-links">
-                <li><a href="https://www.instagram.com/nadinebraendli/" target="_blank">Instagram</a></li>
+                <li><a href="https://www.instagram.com/nads_atelier/" target="_blank">Instagram</a></li>
                 <li><a href="https://www.linkedin.com/in/nadine-elena-br%C3%A4ndli-325a34291/" target="_blank">LinkedIn</a></li>
                 <li><a href="mailto:nadineelenab@gmail.com?subject=Anfrage%20Portfolio-Website">E-Mail</a></li>
             </ul>
@@ -135,7 +166,7 @@
     </footer>
 
     <script>
-        // Projekt-Daten
+        // Projekt-Daten für Video/Social
         const projects = {
             video1: {
                 title: "Reitsport hautnah - Ein POV-Erlebnis",
@@ -206,25 +237,56 @@
                 media: '<img src="images/social3.jpg" alt="Social 3" style="width:100%; border-radius: 1rem;">',
                 youtubeLink: null
             },
-            foto1: {
-                title: "Illustration & Design Projekt 1",
-                description: "Beschreibung für Illustration & Design Projekt 1",
-                media: '<img src="images/foto1.jpg" alt="Foto 1" style="width:100%; border-radius: 1rem;">',
-                youtubeLink: null
-            },
-            foto2: {
-                title: "Illustration & Design Projekt 2",
-                description: "Beschreibung für Illustration & Design Projekt 2",
-                media: '<img src="images/foto2.jpg" alt="Foto 2" style="width:100%; border-radius: 1rem;">',
-                youtubeLink: null
-            },
-            foto3: {
-                title: "Illustration & Design Projekt 3",
-                description: "Beschreibung für Illustration & Design Projekt 3",
-                media: '<img src="images/foto3.jpg" alt="Foto 3" style="width:100%; border-radius: 1rem;">',
-                youtubeLink: null
+            animation2d: {
+                title: "2D Animation",
+                description: "Übung aus dem Modul Sketch & Draw",
+                tasks: ['Illustration', 'Animation'],
+                media: '<img src="https://img.youtube.com/vi/7zgWaA3qevE/maxresdefault.jpg" alt="2D Animation" style="width:100%; border-radius: 1rem;">',
+                youtubeLink: 'https://youtu.be/7zgWaA3qevE'
             }
         };
+
+        // Galerie-Daten für Illustration & Design
+        const galleries = {
+            sketchdraw: {
+                title: "Sketch & Draw",
+                description: "Skizzen aus dem Modul Sketch & Draw",
+                images: [
+                    'images/sketch-draw1.jpeg',
+                    'images/sketch-draw2.jpeg',
+                    'images/sketch-draw3.jpeg'
+                ]
+            },
+            rotterdam: {
+                title: "Sketch & Draw Rotterdam",
+                description: "Skizzen von der Rotterdamexkursion im Modul Sketch & Draw",
+                images: [
+                    'images/rotterdam1.jpeg',
+                    'images/rotterdam2.jpeg',
+                    'images/rotterdam3.jpeg',
+                    'images/rotterdam4.jpeg'
+                ]
+            },
+            gestaltgesetze: {
+                title: "Die 7 Gestaltgesetze",
+                description: "Illustrationen zu den 7 Gestaltgesetzen",
+                images: [
+                    'images/gestaltgesetze1.jpeg',
+                    'images/gestaltgesetze2.jpeg',
+                    'images/gestaltgesetze3.jpeg',
+                    'images/gestaltgesetze4.jpeg',
+                    'images/gestaltgesetze5.jpeg',
+                    'images/gestaltgesetze6.jpeg',
+                    'images/gestaltgesetze7.jpeg',
+                    'images/gestaltgesetze8.jpeg',
+                    'images/gestaltgesetze9.jpeg'
+                ]
+            }
+        };
+
+        // Galerie-State
+        let currentGallery = null;
+        let currentImageIndex = 0;
 
         function openModal(projectId) {
             const project = projects[projectId];
@@ -233,7 +295,6 @@
                 document.getElementById('modalDescription').textContent = project.description;
                 document.getElementById('modalMedia').innerHTML = project.media;
                 
-                // YouTube-Link und Tasks anzeigen wenn vorhanden
                 const youtubeDiv = document.getElementById('modalYouTubeLink');
                 let tasksHTML = '';
                 
@@ -260,12 +321,102 @@
             document.getElementById('projectModal').style.display = 'none';
         }
 
+        // Galerie-Funktionen
+        function openGallery(galleryId) {
+            currentGallery = galleries[galleryId];
+            currentImageIndex = 0;
+            
+            if (currentGallery) {
+                document.getElementById('galleryTitle').textContent = currentGallery.title;
+                document.getElementById('galleryDescription').textContent = currentGallery.description;
+                document.getElementById('totalImages').textContent = currentGallery.images.length;
+                
+                updateGalleryImage();
+                createDots();
+                document.getElementById('galleryModal').style.display = 'block';
+            }
+        }
+
+        function closeGallery() {
+            document.getElementById('galleryModal').style.display = 'none';
+            currentGallery = null;
+            currentImageIndex = 0;
+        }
+
+        function updateGalleryImage() {
+            const img = document.getElementById('galleryImage');
+            img.src = currentGallery.images[currentImageIndex];
+            img.alt = `${currentGallery.title} - Bild ${currentImageIndex + 1}`;
+            document.getElementById('currentIndex').textContent = currentImageIndex + 1;
+            updateDots();
+        }
+
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % currentGallery.images.length;
+            updateGalleryImage();
+        }
+
+        function prevImage() {
+            currentImageIndex = (currentImageIndex - 1 + currentGallery.images.length) % currentGallery.images.length;
+            updateGalleryImage();
+        }
+
+        function createDots() {
+            const dotsContainer = document.getElementById('galleryDots');
+            dotsContainer.innerHTML = '';
+            
+            for (let i = 0; i < currentGallery.images.length; i++) {
+                const dot = document.createElement('span');
+                dot.className = 'gallery-dot';
+                dot.onclick = () => goToImage(i);
+                dotsContainer.appendChild(dot);
+            }
+            updateDots();
+        }
+
+        function updateDots() {
+            const dots = document.querySelectorAll('.gallery-dot');
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentImageIndex);
+            });
+        }
+
+        function goToImage(index) {
+            currentImageIndex = index;
+            updateGalleryImage();
+        }
+
+        // Keyboard Navigation
+        document.addEventListener('keydown', function(e) {
+            const galleryModal = document.getElementById('galleryModal');
+            if (galleryModal.style.display === 'block') {
+                if (e.key === 'ArrowRight') nextImage();
+                if (e.key === 'ArrowLeft') prevImage();
+                if (e.key === 'Escape') closeGallery();
+            }
+            
+            const projectModal = document.getElementById('projectModal');
+            if (projectModal.style.display === 'block' && e.key === 'Escape') {
+                closeModal();
+            }
+        });
+
         // Modal schließen wenn man außerhalb klickt
         window.onclick = function(event) {
-            const modal = document.getElementById('projectModal');
-            if (event.target == modal) {
-                modal.style.display = 'none';
+            const projectModal = document.getElementById('projectModal');
+            const galleryModal = document.getElementById('galleryModal');
+            
+            if (event.target === projectModal) {
+                projectModal.style.display = 'none';
             }
+            if (event.target === galleryModal) {
+                galleryModal.style.display = 'none';
+            }
+        }
+
+        function toggleNav() {
+            const nav = document.querySelector('header nav ul');
+            nav.classList.toggle('open');
         }
     </script>
 

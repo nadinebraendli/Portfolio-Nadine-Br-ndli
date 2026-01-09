@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" class="index-page">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,13 +9,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Lora&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="index-page">
     <header>
         <!-- Logo → zurück zur Startseite -->
         <a href="index.html">
             <img src="images/nur-logo-nadine.png" alt="Nadine Brändli Logo" class="logo">
         </a>
-        
+        <button class="nav-toggle" aria-label="Menü öffnen" onclick="toggleNav()">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
         <nav>
             <ul>
                 <li><a href="about.html">über mich</a></li>
@@ -63,12 +67,19 @@
         <div class="footer-content">
             <p>&copy; 2026 Nadine Brändli</p>
             <ul class="social-links">
-                <li><a href="https://www.instagram.com/nadinebraendli/" target="_blank">Instagram</a></li>
+                <li><a href="https://www.instagram.com/nads_atelier/" target="_blank">Instagram</a></li>
                 <li><a href="https://www.linkedin.com/in/nadine-elena-br%C3%A4ndli-325a34291/" target="_blank">LinkedIn</a></li>
                 <li><a href="mailto:nadineelenab@gmail.com?subject=Anfrage%20Portfolio-Website">E-Mail</a></li>
             </ul>
         </div>
     </footer>
+
+    <script>
+    function toggleNav() {
+        const nav = document.querySelector('header nav ul');
+        nav.classList.toggle('open');
+    }
+    </script>
 
 </body>
 </html>
