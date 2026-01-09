@@ -82,28 +82,20 @@
                     <img src="https://img.youtube.com/vi/WZR0yEJ_FYg/maxresdefault.jpg" alt="Auf Tour mit Andrea Bignasca" style="width:100%; border-radius: 1rem;">
                     <p>Auf Tour mit Andrea Bignasca</p>
                 </div>
-                <div class="project-box coming-soon">
-                    <div class="coming-soon-placeholder" style="width:100%; aspect-ratio: 16/9; background-color: #e0e0e0; border-radius: 1rem; display: flex; align-items: center; justify-content: center;">
-                        <p style="font-size: 1rem; color: #888; text-align: center;">wird bald veröffentlicht</p>
-                    </div>
+                <div class="project-box" onclick="openModal('socialFinale')">
+                    <img src="https://img.youtube.com/vi/IRZc_4A724o/maxresdefault.jpg" alt="Finalist:innenverkündung bandXost 2025" style="width:100%; border-radius: 1rem;">
                     <p>Finalist:innenverkündung bandXost 2025</p>
                 </div>
-                <div class="project-box coming-soon">
-                    <div class="coming-soon-placeholder" style="width:100%; aspect-ratio: 16/9; background-color: #e0e0e0; border-radius: 1rem; display: flex; align-items: center; justify-content: center;">
-                        <p style="font-size: 1rem; color: #888; text-align: center;">wird bald veröffentlicht</p>
-                    </div>
+                <div class="project-box" onclick="openModal('socialChur')">
+                    <img src="https://img.youtube.com/vi/gFDzo1djm5c/maxresdefault.jpg" alt="bandXost-Quali Chur 2025" style="width:100%; border-radius: 1rem;">
                     <p>bandXost-Quali Chur 2025</p>
                 </div>
-                <div class="project-box coming-soon">
-                    <div class="coming-soon-placeholder" style="width:100%; aspect-ratio: 16/9; background-color: #e0e0e0; border-radius: 1rem; display: flex; align-items: center; justify-content: center;">
-                        <p style="font-size: 1rem; color: #888; text-align: center;">wird bald veröffentlicht</p>
-                    </div>
+                <div class="project-box" onclick="openModal('socialVaduz')">
+                    <img src="https://img.youtube.com/vi/Kq7FZtl4kWc/maxresdefault.jpg" alt="bandXost-Quali Vaduz 2025" style="width:100%; border-radius: 1rem;">
                     <p>bandXost-Quali Vaduz 2025</p>
                 </div>
-                <div class="project-box coming-soon">
-                    <div class="coming-soon-placeholder" style="width:100%; aspect-ratio: 16/9; background-color: #e0e0e0; border-radius: 1rem; display: flex; align-items: center; justify-content: center;">
-                        <p style="font-size: 1rem; color: #888; text-align: center;">wird bald veröffentlicht</p>
-                    </div>
+                <div class="project-box" onclick="openModal('socialKreuzlingen')">
+                    <img src="https://img.youtube.com/vi/TLXIwEq-nU4/maxresdefault.jpg" alt="bandXost-Quali Kreuzlingen 2025" style="width:100%; border-radius: 1rem;">
                     <p>bandXost-Quali Kreuzlingen 2025</p>
                 </div>
             </div>
@@ -184,6 +176,27 @@
     <script>
       
         const projects = {
+                                                socialChur: {
+                                                    title: "bandXost-Quali Chur 2025",
+                                                    description: "Das Video zur Qualifikation in Chur für bandXost 2025.",
+                                                    tasks: ['Video', 'Schnitt'],
+                                                    media: '<iframe width="100%" height="315" src="https://www.youtube.com/embed/gFDzo1djm5c" title="bandXost-Quali Chur 2025" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border-radius: 1rem;"></iframe>',
+                                                    youtubeLink: 'https://youtube.com/shorts/gFDzo1djm5c?feature=share'
+                                                },
+                                    socialVaduz: {
+                                        title: "bandXost-Quali Vaduz 2025",
+                                        description: "Das Video zur Qualifikation in Vaduz für bandXost 2025.",
+                                        tasks: ['Video', 'Schnitt'],
+                                        media: '<iframe width="100%" height="315" src="https://www.youtube.com/embed/Kq7FZtl4kWc" title="bandXost-Quali Vaduz 2025" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border-radius: 1rem;"></iframe>',
+                                        youtubeLink: 'https://youtube.com/shorts/Kq7FZtl4kWc?feature=share'
+                                    },
+                        socialKreuzlingen: {
+                            title: "bandXost-Quali Kreuzlingen 2025",
+                            description: "Das Video zur Qualifikation in Kreuzlingen für bandXost 2025.",
+                            tasks: ['Video', 'Schnitt'],
+                            media: '<iframe width="100%" height="315" src="https://www.youtube.com/embed/TLXIwEq-nU4" title="bandXost-Quali Kreuzlingen 2025" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border-radius: 1rem;"></iframe>',
+                            youtubeLink: 'https://youtube.com/shorts/TLXIwEq-nU4?feature=share'
+                        },
             video1: {
                 title: "Reitsport hautnah - Ein POV-Erlebnis",
                 description: "Ein immersives Video-Erlebnis aus der Perspektive eines Reiters. Dieses Projekt zeigt die Dynamik und Schönheit des Reitsports.",
@@ -239,6 +252,13 @@
                 tasks: ['Video'],
                 media: '<img src="https://img.youtube.com/vi/WZR0yEJ_FYg/maxresdefault.jpg" alt="Auf Tour mit Andrea Bignasca" style="width:100%; border-radius: 1rem;">',
                 youtubeLink: 'https://youtu.be/WZR0yEJ_FYg'
+            },
+            socialFinale: {
+                title: "Finalist:innenverkündung bandXost 2025",
+                description: "Die Finalist:innen für bandXost 2025 werden verkündet.",
+                tasks: ['Kamera', 'Ton', 'Schnitt'],
+                media: '<iframe width="100%" height="315" src="https://www.youtube.com/embed/IRZc_4A724o" title="Finalist:innenverkündung bandXost 2025" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border-radius: 1rem;"></iframe>',
+                youtubeLink: 'https://youtube.com/shorts/IRZc_4A724o?feature=share'
             },
             social2: {
                 title: "bandXost Qualifikationen 2025",
